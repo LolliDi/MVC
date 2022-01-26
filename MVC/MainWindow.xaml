@@ -1,0 +1,23 @@
+﻿<Window x:Class="MVC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVC"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="160" Width="250" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock>Выберите арифметическую операцию</TextBlock>
+            <ComboBox Name="CBOperation" SelectionChanged="CBOperation_SelectionChanged"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBox Name="TBoxNum1" Width="70" Margin="22,0,10,0"/>
+                <TextBlock x:Name="TBlockOperation" Width="16"/>
+                <TextBox Name="TBoxNum2" Width="70"/>
+            </StackPanel>
+            <Button Click="BtnAnswer_Click">Вычислить</Button>
+            <TextBlock FontWeight="Bold">Результат:</TextBlock>
+            <TextBlock Name="TBlockAnswer"/>
+        </StackPanel>
+    </Grid>
+</Window>
